@@ -16,10 +16,10 @@ app.use(express.static(path.join(_dirname, 'frontend', 'dist')));
 
 // Use environment variables for the database connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST || '192.168.43.199' ,
-  user: process.env.DB_USER || 'dba',
-  password: process.env.DB_PASSWORD || 'Password123$',
-  database: process.env.DB_NAME || 'login'
+  host: process.env.DB_HOST  ,
+  user: process.env.DB_USER ,
+  password: process.env.DB_PASSWORD ,
+  database: process.env.DB_NAME 
 });
 
 db.connect((err) => {
